@@ -1,125 +1,133 @@
 /* Global Styles */
 :root {
-    --background-color: #f4f4f4;
-    --text-color: #333;
-    --primary-color: #0073e6;
-    --header-background: var(--primary-color);
-    --header-text-color: white;
-    --nav-background: #fff;
+      /* Define CSS variables for easy theming */
+    --background-color: #f4f4f4; /* Light background color */
+    --text-color: #333; /* Dark text color */
+    --primary-color: #0073e6;  /* Primary color for accents */
+    --header-background: var(--primary-color); /* Header background */
+    --header-text-color: white;  /* Header text color */
+    --nav-background: #fff; /* Navigation background */
 }
 
 body {
+    /* Basic body styles */ 
     background-color: var(--background-color);
     color: var(--text-color);
-    transition: background-color 0.5s ease, color 0.5s ease;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transitions for theme changes */
 }
 
 header {
+    /* Styles for the header section */ 
     background-color: var(--header-background);
     color: var(--header-text-color);
     text-align: center;
-    padding: 1rem;
+    padding: 1rem;/* Center text in header */
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 nav ul {
+      /* Styles for navigation menu */
     list-style: none;
-    display: flex;
-    justify-content: center;
+    display: flex;/* Horizontal layout for navigation */
+    justify-content: center;/* Center navigation items */
     background-color: var(--nav-background);
     padding: 0.5rem 0;
     margin: 0;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 15px;/* Space between navigation items */
 }
 
 nav ul li a {
+    /* Styles for navigation links */
     text-decoration: none;
     color: var(--text-color);
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s;/* Transition effect for hover */
 }
 
 nav ul li a:hover {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Change color on hover */
 }
 
 section {
+    /* Styles for sections */
     margin: 2rem auto;
-    max-width: 800px;
+    max-width: 800px;/* Maximum width for readability */
 }
 
 h2 {
+    /* Styles for section headers */
     border-bottom: 2px solid var(--primary-color);
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0; /* Start invisible for animation */
+    transform: translateY(20px); /* Start slightly down for animation */
+    animation: fadeInUp 1s ease-out forwards; /* Apply animation */
 }
 
 ul {
-    list-style: none;
+    list-style: none; /* Remove bullet points */
 }
 
 ul li {
-    margin-bottom: 1rem;
+    margin-bottom: 1rem;/* Space between list items */
 }
 
 footer {
+    /* Styles for the footer */
     text-align: center;
     padding: 1rem;
     background-color: var(--primary-color);
     color: var(--header-text-color);
-    margin-top: 7rem;
+    margin-top: 7rem;/* Space above footer */
 
 }
 
 /* Dark mode styles */
 body.dark-mode {
-    --background-color: #333;
-    --text-color: #f4f4f4;
-    --primary-color: #1e90ff;
-    --header-background: #1e90ff;
-    --header-text-color: #f4f4f4;
-    --nav-background: #444;
+    --background-color: #333;/* Dark background color */
+    --text-color: #f4f4f4;/* Light text color */
+    --primary-color: #1e90ff;/* Different primary color for dark mode */
+    --header-background: #1e90ff;/* Header background in dark mode */
+    --header-text-color: #f4f4f4;/* Header text color in dark mode */
+    --nav-background: #444; /* Navigation background in dark mode */
 }
 
 /* Animations */
 @keyframes fadeInUp {
     to {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 1;/* End visible */
+        transform: translateY(0);/* End in original position */
     }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column;
+        flex-direction: column; /* Stack navigation items vertically on small screens */
     }
 
     section {
-        padding: 0 1rem;
+        padding: 0 1rem;/* Add padding to sections */
     }
 
     footer {
-        padding: 0.5rem;
+        padding: 0.5rem;/* Adjust footer padding */
     }
 }
 
 @media (max-width: 480px) {
     header h1 {
-        font-size: 1.5rem;
+        font-size: 1.5rem;/* Adjust header font size */
     }
 
     header p {
-        font-size: 1rem;
+        font-size: 1rem;/* Adjust subtitle font size */
     }
 
     nav ul li {
-        margin: 0 5px;
+        margin: 0 5px; /* Reduce space between navigation items */
     }
 }
