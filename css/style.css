@@ -1,0 +1,125 @@
+/* Global Styles */
+:root {
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --primary-color: #0073e6;
+    --header-background: var(--primary-color);
+    --header-text-color: white;
+    --nav-background: #fff;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+header {
+    background-color: var(--header-background);
+    color: var(--header-text-color);
+    text-align: center;
+    padding: 1rem;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: var(--nav-background);
+    padding: 0.5rem 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+section {
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+h2 {
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--header-text-color);
+    margin-top: 7rem;
+
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    --background-color: #333;
+    --text-color: #f4f4f4;
+    --primary-color: #1e90ff;
+    --header-background: #1e90ff;
+    --header-text-color: #f4f4f4;
+    --nav-background: #444;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    section {
+        padding: 0 1rem;
+    }
+
+    footer {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav ul li {
+        margin: 0 5px;
+    }
+}
